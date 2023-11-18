@@ -52,6 +52,9 @@ def map(car_id):
             coordinates = [location['coordinates'] for location in car['locations']]
             print(coordinates)
             break
+        
+    if len(coordinates) == 0:
+        return jsonify({'error': 'Car not found.'}), 404
     return render_template('map.html', coordinates=coordinates)
 
 # GET a map of the latest locations of all cars
@@ -60,21 +63,25 @@ def get_latest_map():
     # Get the latest location of each car
     latest_locations = []
     for car in data['cars']:
-        latest_location = max(car['locations'], key=lambda x: x['timestamp'])
-        latest_locations.append({'latitude': latest_location['coordinates']['latitude'], 'longitude': latest_location['coordinates']['longitude']})
-    print(latest_locations)
+        if car['locations']:
+            latest_location = max(car['locations'], key=lambda x: x['timestamp'])
+            latest_locations.append({'latitude': latest_location['coordinates']['latitude'], 'longitude': latest_location['coordinates']['longitude']})
+    if len(latest_locations) == 0:
+        return jsonify({'error': 'Cars not found.'}), 404
     return render_template('map.html', coordinates=latest_locations)
 
 # GET the furthest location from a hardcoded one for all cars
 @app.route('/map/furthest')
 def get_furthest_map():
     # Hardcoded location
-    reference_location = (37.7749, -122.4194)
+    reference_location = (42.65234964884238, 23.354063873748185)
     # Get the furthest location of each car
     furthest_locations = []
     for car in data['cars']:
         furthest_location = max(car['locations'], key=lambda x: geodesic(reference_location, (x['coordinates']['latitude'], x['coordinates']['longitude'])).km)
         furthest_locations.append({'latitude': furthest_location['coordinates']['latitude'], 'longitude': furthest_location['coordinates']['longitude']})
+    if len(furthest_locations) == 0:
+        return jsonify({'error': 'Cars not found.'}), 404
     return render_template('map.html', coordinates=furthest_locations)
 
 if __name__ == '__main__':

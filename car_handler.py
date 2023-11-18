@@ -21,8 +21,10 @@ def create_car_and_add_location():
     car = {
         'id': car_id,
         'locations': [{
-            'longitude': SOFIA_CENTER[1] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
-            'latitude': SOFIA_CENTER[0] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
+            'coordinates': {
+                'longitude': SOFIA_CENTER[1] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
+                'latitude': SOFIA_CENTER[0] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS)
+            },
             'timestamp': datetime.utcnow().isoformat(),
             'device_id': f'{car_id}'
         }]
@@ -38,8 +40,10 @@ def create_car_and_add_location():
     while True:
         # Define the request data
         location = {
-            'longitude': SOFIA_CENTER[1] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
-            'latitude': SOFIA_CENTER[0] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
+            'coordinates': {
+                'longitude': SOFIA_CENTER[1] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS),
+                'latitude': SOFIA_CENTER[0] + random.uniform(-SOFIA_RADIUS, SOFIA_RADIUS)
+            },
             'timestamp': datetime.utcnow().isoformat(),
             'device_id': f'{car_id}'
         }

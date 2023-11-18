@@ -1,53 +1,65 @@
 {
     "cars": [
         {
-            "id": 660,
+            "id": 133,
             "locations": [
                 {
-                    "longitude": 23.393716929352923,
-                    "latitude": 42.77645348075593,
-                    "timestamp": "2023-11-14T13:34:51.575820",
-                    "device_id": "660"
+                    "coordinates": {
+                        "longitude": 23.24871406895972,
+                        "latitude": 42.685862469712625
+                    },
+                    "timestamp": "2023-11-18T21:53:21.695879",
+                    "device_id": "133"
                 },
                 {
-                    "longitude": 23.35055930603794,
-                    "latitude": 42.703412085930125,
-                    "timestamp": "2023-11-14T13:36:53.641007",
-                    "device_id": "660"
+                    "coordinates": {
+                        "longitude": 23.266445213121635,
+                        "latitude": 42.66867389244266
+                    },
+                    "timestamp": "2023-11-18T21:55:23.773776",
+                    "device_id": "133"
                 }
             ]
         },
         {
-            "id": 258,
+            "id": 737,
             "locations": [
                 {
-                    "longitude": 23.359955696454147,
-                    "latitude": 42.71642098979518,
-                    "timestamp": "2023-11-14T13:34:51.576818",
-                    "device_id": "258"
+                    "coordinates": {
+                        "longitude": 23.311791924524726,
+                        "latitude": 42.76768227364437
+                    },
+                    "timestamp": "2023-11-18T21:53:21.696880",
+                    "device_id": "737"
                 },
                 {
-                    "longitude": 23.410246570331473,
-                    "latitude": 42.73075388898257,
-                    "timestamp": "2023-11-14T13:36:53.642015",
-                    "device_id": "258"
+                    "coordinates": {
+                        "longitude": 23.334826920085867,
+                        "latitude": 42.77337721312054
+                    },
+                    "timestamp": "2023-11-18T21:55:23.776839",
+                    "device_id": "737"
                 }
             ]
         },
         {
-            "id": 329,
+            "id": 967,
             "locations": [
                 {
-                    "longitude": 23.24494835651239,
-                    "latitude": 42.74409177430209,
-                    "timestamp": "2023-11-14T13:34:51.575820",
-                    "device_id": "329"
+                    "coordinates": {
+                        "longitude": 23.402229722319287,
+                        "latitude": 42.705965591708306
+                    },
+                    "timestamp": "2023-11-18T21:53:21.696880",
+                    "device_id": "967"
                 },
                 {
-                    "longitude": 23.376544663551478,
-                    "latitude": 42.72371891504873,
-                    "timestamp": "2023-11-14T13:36:53.642015",
-                    "device_id": "329"
+                    "coordinates": {
+                        "longitude": 23.418800093905336,
+                        "latitude": 42.59964320358401
+                    },
+                    "timestamp": "2023-11-18T21:55:23.781866",
+                    "device_id": "967"
                 }
             ]
         }
